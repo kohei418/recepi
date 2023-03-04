@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>結果</h1>
+{% for i in range(idx) %}
+<div>
+    <P>タイトル{{res.iloc[i,2]}}</P>
+    <P>レシピ詳細{{res.iloc[i,3]}}</P>
+    <P>レシピURL
+        <a href="{{res.iloc[i,4]}}"></a>{{res.iloc[i,4]}}</P>
+    <P>レシピ画像{{res.iloc[i,5]}}</P>
+    <P>値段{{res.iloc[i,6]}}</P>
+    <P>時間{{res.iloc[i,7]}}</P>
+    <P>材料{{res.iloc[i,8]}}</P>
+    <P>記事作成日{{res.iloc[i,9]}}</P>
+</div>
+
+{% endfor %}
+{% endblock %}

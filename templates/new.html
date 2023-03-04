@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <h2>写真をアップロードしてください</h2>
+    
+    <body>
+        <form action="/show" method="POST" enctype="multipart/form-data">
+            <!-- 「name」属性を「name」と定義-->
+            <input type="file" id = "upload_file" name = "upload_file" multiple="multiple" class="form-control">
+            <input type="submit" value="POSTを送信！">
+        </form>
+    </body>
+
+{% endblock %}
